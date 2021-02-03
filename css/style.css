@@ -1,0 +1,322 @@
+body {
+  z-index: 2;
+  font-family: "Cormorant Garamond";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
+  background-color: #d7cbbb;
+  color: #516880;
+  margin: 40px 64px 40px 64px;
+  overscroll-behavior: none;
+  opacity: 1;
+  transition: opacity 3s;
+}
+
+    /* Background Image Fade */
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 120%;
+  min-width: 1400px;
+  z-index: -1;
+  animation: fadein 4s;
+}
+
+@keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+    /* General Text Styling */
+h1 {
+  font-size: 80px;
+  margin: 16px 0 16px 0;
+  line-height: 0.6;
+}
+
+h2 {
+  font-size: 56px;
+  margin: 20px 0 0 0;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 40px;
+  margin: auto;
+}
+
+h4 {
+  font-size: 28px;
+  margin: auto;
+}
+
+p {
+  font-weight: 400;
+  font-family: "EB Garamond";
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+a {
+  text-decoration: none;
+  color: #516880;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #394854;
+}
+
+i {
+  font-style: italic;
+}
+
+small {
+  font-size: 18px;
+}
+
+    /* Specific Text Styling */
+.para {
+  padding-left: 18%;
+  padding-right: 18%;
+}
+
+.quotation {
+  font-size: 20px;
+  line-height: 1;
+  padding-left: 32px;
+}
+
+div.spott {
+  color: #87595a;
+  padding-left: 96px;
+  padding-right: 120px;
+  text-align: justify;
+}
+
+a.spott {
+  color: #87595a;
+}
+
+a.spott:hover {
+  color: #523838;
+}
+
+.film-index small {
+  position: relative;
+  left: 36px;
+	top: -15px;
+}
+
+.credit {
+  position: absolute;
+  display: inline-block;
+  width: 90%;
+  top: 90%;
+  font-size: 18px;
+}
+
+.poem p {
+  font-family: "Cormorant Garamond";
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+    /* Essay JS */
+.essays {
+  display: none;
+  line-height: 1;
+}
+
+a.show-essays {
+  color: #a06d6e;
+  transition: all 0.3s;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+a.show-essays:hover {
+  color: #795050;
+}
+
+.dissertations {
+  display: none;
+  line-height: 1;
+}
+
+a.show-dissertations {
+  color: #a06d6e;
+  transition: all 0.3s;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+a.show-dissertations:hover {
+  color: #795050;
+}
+
+.quin-abstract {
+  display: none;
+  color: #795050;
+}
+
+a.show-quin-abstract {
+  color: #a06d6e;
+  transition: all 1s;
+}
+
+a.show-quin-abstract:hover {
+  color: #795050;
+}
+
+    /* Images */
+.film-still img {
+  max-width: 420px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #516880;
+  transition: opacity 0.2s;
+}
+
+.film-still img:hover {
+  opacity: 0.75;
+}
+
+.art-still img {
+  max-height: 60vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #516880;
+  transition: opacity 0.2s;
+}
+
+.art-still img:hover {
+  opacity: 0.75;
+}
+
+figcaption {
+  text-align: center;
+}
+
+/* Scroll JS */
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 6px;
+  background-color: #a06d6e;
+  ;
+}
+
+#return-button {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  cursor: pointer;
+  font-size: 56px;
+}
+
+    /* Modals */
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(235, 230, 211, 0.85);
+}
+
+.modal-close {
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 20px 25px;
+  cursor: pointer;
+  font-size: 32px;
+  color: #a06d6e;
+}
+
+.modal-content img {
+  position: fixed;
+  border: 2px solid #516880;
+  top: 50%;
+  left: 50%;
+  max-width: 90%;
+  max-height: 90%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-close:hover {
+  color: #7e5354;
+}
+
+.modal {
+  display: none;
+}
+
+    /* Flag JS */
+.flag {
+  width: 100vw;
+  height: 70vh;
+  position: fixed;
+  top: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 20;
+  pointer-events: none;
+}
+
+    /* Text Selection */
+body ::selection {
+  background-color: #fffce9;
+  color: #87595a;
+}
+
+    /* Media Queries */
+@media (max-width: 800px) {
+  .para {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+}
+
+@media (max-width: 720px) {
+  body {
+      margin: 40px 32px 16px 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .para {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .credit {
+    top: 87.5%;
+  }
+}
+
+@media (max-width: 460px) {
+  body {
+    margin: 40px 16px 16px 16px;
+    font-size: 20px;
+  }
+
+  .poem {
+    font-size: 18px;
+  }
+}
